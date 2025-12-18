@@ -2,115 +2,153 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Contas DBU - Promoção</title>
+<title>Dragon Blox Ultimate - Vendas</title>
 
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(135deg, #000000, #1a0000);
   color: white;
+}
+
+header {
   text-align: center;
+  padding: 30px;
+  background: black;
 }
 
-h1 {
+header h1 {
   color: yellow;
-  margin-top: 20px;
+  font-size: 36px;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
-.produto {
-  background: #111;
-  border: 2px solid red;
-  border-radius: 12px;
-  padding: 15px;
-  margin: 15px 0;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.produto:hover {
-  transform: scale(1.03);
-  background: #1a1a1a;
-}
-
-button {
-  margin-top: 15px;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: bold;
+nav button {
+  padding: 12px 25px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background: red;
-  color: white;
+  font-weight: bold;
+  background: #ffcc00;
 }
 
-#pixBox {
+nav button:hover {
+  background: #ffaa00;
+}
+
+.section {
   display: none;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section.active {
+  display: block;
+}
+
+.card {
   background: #111;
-  border: 2px solid yellow;
   border-radius: 15px;
   padding: 20px;
-  margin-top: 25px;
+  margin: 15px 0;
+  border: 2px solid red;
 }
 
-.pixkey {
-  background: #000;
+.card h2 {
+  color: #00ffcc;
+}
+
+.card button {
+  margin-top: 10px;
+  width: 100%;
   padding: 12px;
-  border-radius: 8px;
-  margin: 10px 0;
+  background: #00ff99;
+  border: none;
+  border-radius: 10px;
   font-size: 16px;
-  word-break: break-all;
+  cursor: pointer;
 }
 
-.whatsapp {
+.pix-box {
+  display: none;
   margin-top: 15px;
-  display: inline-block;
-  background: #25D366;
-  padding: 12px 18px;
+  background: black;
+  padding: 15px;
   border-radius: 10px;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
+  border: 1px solid #00ff99;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: gray;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🔥 CONTAS DBU - PROMOÇÃO 🔥</h1>
+<header>
+  <h1>🔥 DRAGON BLOX ULTIMATE 🔥</h1>
+  <p>Venda de contas DBU - Promoção</p>
+</header>
 
-<div class="container">
+<nav>
+  <button onclick="show('barata')">💸 Barata</button>
+  <button onclick="show('media')">💰 Média</button>
+  <button onclick="show('cara')">💎 Cara</button>
+</nav>
 
-  <div class="produto" onclick="mostrarPix('10 Rebirths - R$1,50')">
-    <h2>10 Rebirths</h2>
-    <p>R$ 1,50</p>
-  </div>
+<!-- BARATA -->
+<div id="barata" class="section active">
+  <div class="card"><h2>10 Rebirths</h2><p>R$ 1,50</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><p>Envie o comprovante:</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>50 Rebirths</h2><p>R$ 3,50</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>500 Rebirths</h2><p>R$ 12,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>1.000 Rebirths</h2><p>R$ 19,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>1.500 Rebirths</h2><p>R$ 24,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+</div>
 
-  <div class="produto" onclick="mostrarPix('50 Rebirths - R$3,50')">
-    <h2>50 Rebirths</h2>
-    <p>R$ 3,50</p>
-  </div>
+<!-- MEDIA -->
+<div id="media" class="section">
+  <div class="card"><h2>2.800 Rebirths</h2><p>R$ 38,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>3.900 Rebirths</h2><p>R$ 48,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>4.200 Rebirths</h2><p>R$ 57,50</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>5.000 Rebirths</h2><p>R$ 68,50</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>10.000 Rebirths</h2><p>R$ 108,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+</div>
 
-  <div class="produto" onclick="mostrarPix('500 Rebirths - R$12,00')">
-    <h2>500 Rebirths</h2>
-    <p>R$ 12,00</p>
-  </div>
+<!-- CARA -->
+<div id="cara" class="section">
+  <div class="card"><h2>23.000 Rebirths</h2><p>R$ 133,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>35.000 Rebirths</h2><p>R$ 162,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>50.000 Rebirths</h2><p>R$ 186,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>100.000 Rebirths</h2><p>R$ 244,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>150.000 Rebirths</h2><p>R$ 297,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+  <div class="card"><h2>200.000 Rebirths</h2><p>R$ 344,00</p><button onclick="pix(this)">Pagar no Pix</button><div class="pix-box"><p><b>Pix:</b> davi091448shelby@gmail.com</p><a href="https://wa.me/5581985622987" target="_blank">📲 81985622987</a></div></div>
+</div>
 
-  <div class="produto" onclick="mostrarPix('5.000 Rebirths - R$68,50')">
-    <h2>5.000 Rebirths</h2>
-    <p>R$ 68,50</p>
-  </div>
+<footer>© Dragon Blox Ultimate</footer>
 
-  <div id="pixBox">
-    <h2>Pagamento via PIX</h2>
+<script>
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function pix(btn) {
+  const box = btn.nextElementSibling;
+  box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
 
+</body>
+                                                                                                                                                                                                                                                    </html>
     <p>Chave Pix:</p>
     <div class="pixkey" id="pixKey">
       davi091448shelby@gmail.com
